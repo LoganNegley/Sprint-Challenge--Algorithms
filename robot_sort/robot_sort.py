@@ -90,6 +90,10 @@ class SortingRobot:
         """
         Returns True if the robot's light is on and False otherwise.
         """
+        if self._light == "ON":
+            return True
+        else:
+            return False
         return self._light == "ON"
 
     def sort(self):
