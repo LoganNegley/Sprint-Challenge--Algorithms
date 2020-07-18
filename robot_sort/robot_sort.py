@@ -76,21 +76,21 @@ class SortingRobot:
         else:
             return 0
 
-    def set_light_on(self):
-        """
-        Turn on the robot's light
-        """
-        self._light = "ON"
-    def set_light_off(self):
-        """
-        Turn off the robot's light
-        """
-        self._light = "OFF"
-    def light_is_on(self):
-        """
-        Returns True if the robot's light is on and False otherwise.
-        """
-        return self._light == "ON"
+    # def set_light_on(self):
+    #     """
+    #     Turn on the robot's light
+    #     """
+    #     self._light = "ON"
+    # def set_light_off(self):
+    #     """
+    #     Turn off the robot's light
+    #     """
+    #     self._light = "OFF"
+    # def light_is_on(self):
+    #     """
+    #     Returns True if the robot's light is on and False otherwise.
+    #     """
+    #     return self._light == "ON"
 
     def sort(self):
         """
@@ -98,6 +98,7 @@ class SortingRobot:
         """
         # Fill this out
         pass
+        insertion sort?
 
 
 if __name__ == "__main__":
