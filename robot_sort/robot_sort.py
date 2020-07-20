@@ -76,30 +76,37 @@ class SortingRobot:
         else:
             return 0
 
-    # def set_light_on(self):
-    #     """
-    #     Turn on the robot's light
-    #     """
-    #     self._light = "ON"
-    # def set_light_off(self):
-    #     """
-    #     Turn off the robot's light
-    #     """
-    #     self._light = "OFF"
-    # def light_is_on(self):
-    #     """
-    #     Returns True if the robot's light is on and False otherwise.
-    #     """
-    #     return self._light == "ON"
+    def set_light_on(self):
+        """
+        Turn on the robot's light
+        """
+        self._light = "ON"
+    def set_light_off(self):
+        """
+        Turn off the robot's light
+        """
+        self._light = "OFF"
+    def light_is_on(self):
+        """
+        Returns True if the robot's light is on and False otherwise.
+        """
+        return self._light == "ON"
 
     def sort(self):
-        """
-        Sort the robot's list.
-        """
-        # Fill this out
-        pass
-        insertion sort?
+    # out of place selection sort
+    # as long as we can move right move right
+    # pick up firts item and compare with next item
+    # if compare_item == -1
+    # swap_item
+    # continue moving left comparing and swaping with less than what is held
+    # at the end move back left comparing 
+    # if compare_item == None 
+    # compare_item == item held
+    # continue moving right until compare item == None
 
+    # need a way to stop going back and forth---- infinite loop???????
+    ########### Fill this out
+        pass
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
