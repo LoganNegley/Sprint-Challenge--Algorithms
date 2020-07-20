@@ -106,7 +106,15 @@ class SortingRobot:
 
     # need a way to stop going back and forth---- infinite loop???????
     ########### Fill this out
-        pass
+        
+
+        while self.can_move_right():
+            self.move_right()
+            if self.compare_item() == 1:
+                self.swap_item()
+
+
+
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
