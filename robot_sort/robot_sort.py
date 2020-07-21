@@ -109,24 +109,27 @@ class SortingRobot:
         
         
         self.set_light_on() #Trun on light to activate while loop
+        self.swap_item() #pick up first item
 
         while self.light_is_on(): #while light is on run this loop
 
-            self.swap_item() #pick up first item
 
             while self.can_move_right(): #if you can move right go right
-                if self.compare_item() == 0:
-                    self.swap_item()
-                # elif self.compare_item() == None:
-                #     self.set_light_off()
-                #     break
+                self.move_right()
+                if self.compare_item() == 1: #compare held item with next 
+                    self.swap_item() #if held item is larger replace
+                
                 else:
-                 self.move_right()
+                 self.move_right() #if held item is not larger move right
 
             while self.can_move_left():
                 self.move_left()
                 if self.compare_item() == None or self.compare_item() == 1:
                     self.swap_item()
+            
+            if self.compare_item() == None:
+            #     self.swap_item()
+            #     self.move_right()
                 self.set_light_off()
 
 
