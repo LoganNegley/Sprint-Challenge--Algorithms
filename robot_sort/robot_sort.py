@@ -107,16 +107,26 @@ class SortingRobot:
     # need a way to stop going back and forth---- infinite loop???????
     ########### Fill this out
         
+        
+        self.set_light_on()
 
-        while self.can_move_right():
-            self.move_right()
-            if self.compare_item() == 1:
-                self.swap_item()
+        while self.light_is_on():
+            self.swap_item()
+            while self.can_move_right():
+                if self.compare_item() == 1:
+                    self.swap_item()
+                elif self.compare_item() == None:
+                    self.set_light_off()
+                    break
+                else:
+                 self.move_right()
 
-        while self.can_move_left():
-            self.move_left()
-            if self.compare_item() == None or self.compare_item() == 1:
-                self.swap_item()
+            while self.can_move_left():
+                self.move_left()
+                if self.compare_item() == None or self.compare_item() == 1:
+                    self.swap_item()
+                
+
 
 
 
